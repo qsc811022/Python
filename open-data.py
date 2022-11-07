@@ -13,5 +13,8 @@ with request.urlopen(src) as response:
     data=json.load(response)
 
 clist=data["result"]["results"]
-for company in clist:
-    print(company["program"])
+
+with open("open.txt", "w", encoding="utf-8") as file:
+    for company in clist:
+        file.write(company["program"]+"\n")
+
