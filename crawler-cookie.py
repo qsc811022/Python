@@ -1,8 +1,9 @@
 import urllib.request as req
-url="https://www.ptt.cc/bbs/movie/index.html"
+url="https://www.ptt.cc/bbs/Gossiping/index.html"
 
 #建立一個 Requestion物件，附加Request Headers的資訊
 request=req.Request(url, headers={
+    "cookie":"over18=1",
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
 })
 
